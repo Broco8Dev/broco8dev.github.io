@@ -188,12 +188,12 @@
 
   
   h1 {
-    font-family: "SF Pro Display";
+    font-family: "Inter";
     font-weight: 100;
   }
   
   h2 {
-    font-family: "SF Pro Text";
+    font-family: "Inter";
     font-weight: 200;
     transition: transform 0.5s ease;
     cursor: pointer;
