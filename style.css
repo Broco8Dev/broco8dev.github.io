@@ -188,12 +188,12 @@
 
   
   h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter";
     font-weight: 100;
   }
   
   h2 {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter";
     font-weight: 200;
     transition: transform 0.5s ease;
     cursor: pointer;
