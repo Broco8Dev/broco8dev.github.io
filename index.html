@@ -15,6 +15,8 @@
         body {
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
         iframe {
             width: 100%;
@@ -26,6 +28,20 @@
 </head>
 <body>
     <canvas id="gradient-canvas"></canvas>
+    <div class="navbar">
+        <div class="vstack">
+          <img class="selected-navbar-image" onClick="switchPage('/home.html', this)" width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/FFFFFF/home-page--v1.png" alt="home-page--v1" />
+          <h1 class="navbar-title">Home</h1>
+        </div>
+        <div class="vstack">
+          <img class="navbar-image" onClick="switchPage('/explore.html', this)" width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/FFFFFF/compass--v1.png" alt="compass--v1" />
+          <h1 class="navbar-title">Projects</h1>
+        </div>
+        <div class="vstack">
+          <img class="navbar-image" onClick="switchPage('/starred.html', this)" width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/FFFFFF/star--v1.png" alt="star--v1" />
+          <h1 class="navbar-title">Socials</h1>
+        </div>
+      </div>
     <iframe id="myIFrame" src="/explore.html"></iframe>
     <script src="background.js"></script>
     <script src="handler.js"></script>
