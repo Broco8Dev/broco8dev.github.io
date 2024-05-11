@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Fullscreen IFrame</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 0;
+            scale: 1.1;
+        }
+
+        .bg video {
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            filter: blur(10px);
+        }
+
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <video autoplay loop muted playsinline>
+            <source src="background.mp4" type="video/mp4">
+        </video>
+    </div>
+<div class="bottom-blur-parent">
+    <div class="bottom-blur"></div>
+</div>
+    <div class="navbar-parent">
+        <nav class="navbar">
+            <div style="padding: 8px">
+                <a onclick="reloadPage();">Home</a>
+                <a onclick="setGlob('About');">About Me</a>
+                <a onclick="setGlob('Projects');">Projects</a>
+                <a onclick="setGlob('Contact');">Contact</a>
+            </div>
+        </nav>
+    </div>
+    <iframe id="myIFrame" src="home.html"></iframe>
+    
+    <script src="pageSwitcher.js"></script>
+</body>
+</html>

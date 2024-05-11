@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    </head>
+    <style>
+        body, html {
+            overflow-x: hidden;
+        }
+
+        body {
+            margin-bottom: 150px;
+            justify-content: center;
+        }
+    </style>
+    <body>
+
+    <div class="home">
+        <div class="hero" id="Home">
+            <div class="child">
+            <div class="vstack">
+                <h1 style="width: 500px; height: auto; margin-bottom: 0;">Yo, I'm BrocoDev</h1>
+                <p style="margin-top: 0px; margin-bottom: 18px;">15 yr. developer guy</p>
+                <a onclick="setGlob('About')">Learn More</a>
+            </div>
+                <div class="links">
+                    <img onclick="openLinkInNewTab('https://discord.com/users/723310347724783687')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/discord.png" alt="domain"/>
+                    <img onclick="openLinkInNewTab('https://www.youtube.com/channel/UCwUdhsO8-kYUvRWv4h6RVmQ')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/youtube-play.png" alt="domain"/>
+                    <img onclick="openLinkInNewTab('https://accounts.google.com/ServiceLogin?service=mail&passive=true&Email=example@domain.com&continue=https://mail.google.com/mail/u/theinsidedevs@gmail.com/')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/gmail.png" alt="domain"/>
+                    <img onclick="openLinkInNewTab('https://github.com/Broco8Dev')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/github.png" alt="domain"/>
+                    <img onclick="openLinkInNewTab('https://brocodev.itch.io/')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/itch-io.png" alt="domain"/>
+                    <img onclick="openLinkInNewTab('https://twitter.com/Broco8Real')" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/twitterx--v2.png" alt="domain"/>
+                </div>
+            </div>
+        </div>
+        <hr>
+    
+        <div class="features" id="featuresContainer">
+                <div class="feature">
+                    <h3>Website Dev</h3>
+                    <p>Frontend & Backend Website Developer.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/250/FFFFFF/domain.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>iOS, Windows, Mac Dev</h3>
+                    <p>Creating apps for iOS and Desktop.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/web.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>Game Dev</h3>
+                    <p>Advanced Unity Developer.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/apple-arcade.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>Graphic Designer</h3>
+                    <p>Procreate + Photoshop for Graphic Design.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/easel.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>Pixel Artist</h3>
+                    <p>Pixel Art for Video Games.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/pixel-star.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>General Purpose Dev</h3>
+                    <p>Java, C#, Python, C++, etc.</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/google-code.png" alt="domain"/>
+                </div>
+                <div class="feature">
+                    <h3>Engineer</h3>
+                    <p>Beginner/Intermediate Engineer</p>
+                    <img width="120" height="120" src="https://img.icons8.com/ios-glyphs/480/FFFFFF/maintenance.png" alt="domain"/>
+                </div>
+            </div>
+
+        <hr>
+        <div class="center-horizontal">
+            <div class="info-section" id="About">
+                <h1 class="header">
+                    About Me
+                </h1>
+                <h1 class="subheader">
+                    Culture
+                </h1>
+                <h2 class="sub">
+• I'm born and raised in Vancouver, Canada.<br><br>
+• I'm half Lebanese & half Canadian.<br><br>
+• I speak English & French.
+                </h2>
+
+                <h1 class="subheader">
+                    Backstory
+                </h1>
+                <h2 class="sub">            
+• I started programming in Scratch when I was ~6.<br><br>
+• I started game development in Unity when I was 10.<br><br>
+• Released games until I was 13, and started competitive Java/Python development.<br><br>
+• Then, I started doing iOS app development.<br><br>
+• Now, I do websites, PC software, and all the previously mentioned.
+                </h2>
+            </div>
+
+            <div class="info-section" id="Projects">
+                <h1 class="header">
+                    Projects
+                </h1>
+                <h1 class="subheader">
+                    Nano
+                </h1>
+                <h2 class="sub">
+                    Nano is an AI assistant that is meant to bridge the gap between your iDevice and your PC. Interact with it like ChatGPT or Siri, and prompt it to perform complex tasks such as scheduling, interpreting an image, googling, and more!
+                </h2>
+
+                <h1 class="subheader">
+                    Locus
+                </h1>
+                <h2 class="sub">            
+                    Locus is an Augumented Reality headset designed to allow you to work more efficiently by turning your workspace into 3D. Additionally, you can create virtual toggles that interact with your real environment such as light switches, power buttons, etc. Locus is specially built to seamlessly work with Nano and Fix.
+                </h2>
+
+                <h1 class="subheader">
+                    Flux
+                </h1>
+                <h2 class="sub">            
+                    Flux was an iOS app that allowed you to use jailbreak-like tweaks on a non-jailbroken version iOS through the power of iOS Shortcuts.
+                </h2>
+
+                <h1 class="subheader">
+                    Welcome to The Backrooms!
+                </h1>
+                <h2 class="sub">            
+                    A shitty game about the Backrooms creepypasta.
+                </h2>
+
+                <h1 class="subheader">
+                    More
+                </h1>
+                <h2 class="sub">            
+                    I have many more projects that are not worthy mentioning here ...
+                </h2>
+            </div>
+
+            <div class="info-section" id="Contact">
+                <h1 class="header">
+                    Contact
+                </h1>
+                <h1 class="subheader">
+                    Email
+                </h1>
+                <h2 class="sub">
+                    You can contact me @ theinsidedevs@gmail.com.
+                </h2>
+
+                <h1 class="subheader">
+                    Discord
+                </h1>
+                <h2 class="sub">
+                    You can message me @ theantidisestablishmentarianist.
+                </h2>
+            </div>
+        </div>
+    </div>
+        <script>
+            function checkGlob() {
+                if(top.glob != null) {
+                    scrolltoID(top.glob);
+                    top.glob = null;
+                }
+
+            }
+
+            const container = document.getElementById("featuresContainer");
+    
+            let startX = 0;
+            const speed = 1;
+    
+            function scrollFeatures() {
+                const firstFeature = container.firstElementChild;
+                const firstFeatureWidth = firstFeature.offsetWidth + parseInt(window.getComputedStyle(firstFeature).marginRight);
+    
+                startX -= speed;
+
+                if (startX <= -firstFeatureWidth) {
+                    startX += firstFeatureWidth;
+                    container.appendChild(firstFeature);
+                }
+    
+                container.style.transform = `translateX(${startX}px)`;
+
+                requestAnimationFrame(scrollFeatures);
+            }
+    
+            requestAnimationFrame(scrollFeatures);
+            setInterval(checkGlob, 10);
+        </script>
+         <script src="pageSwitcher.js"></script>
+    </body>
+</html>
