@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <style>
+        body {
+            overflow: hidden;
+            overflow-y: scroll;
+            background-color: transparent;
+        }
+
+        .progressive-blur {
+            z-index: 2;
+            position: fixed;
+            transform: translateX(-15px);
+            bottom: 0;
+            pointer-events: none;
+            width: 120%;
+            height: 140px;
+            mask: linear-gradient(transparent, black, black);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body>
+    <div class="progressive-blur"></div>
+    <div class="circle"></div>
+    <div class="context">
+        <img class="context-img" src="pfp.png" alt="Prism Icon" id="top">
+        <h1>BrocoDev</h1>
+        <h2><span class="highlighted">Multi-Platform</span> Full Stack Developer</h2>
+
+        <div class="context-buttons">
+            <div class="context-buttons-hstack">
+                <h3 class="context-button" id="context-button" onclick="scrollToElement('info')">Learn More</h3>
+                <!-- <span onclick="openURL('https://github.com/Broco8Dev/Prism/releases/latest')" class="material-symbols-rounded context-download-button">downloading</span>    -->
+            </div>
+
+            <div class="context-buttons-hstack">
+                <img onclick="openURL('https://discord.gg/yx35bgRxF4')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/discord-logo.png" alt="discord-logo"/>
+                <img onclick="showTwitterOptions(event)" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/twitter.png" alt="twitter-logo"/>
+                <img onclick="openURL('https://www.youtube.com/@BrocoDev')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/youtube-play.png" alt="discord-logo"/>
+                <img onclick="openURL('https://github.com/Broco8Dev/Prism')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/github.png" alt="discord-logo"/>
+            </div>
+
+            <div id="twitter-selector" class="twitter-selector">
+                <button onclick="openTwitterAccount('https://x.com/Broco8Dev')">BrocoDev</button>
+                <button onclick="openTwitterAccount('https://x.com/NovaJBNews')">NovaJB</button>
+            </div>
+   
+        </div>
+
+        <div class="info" id="info">
+            <h1>Who am I?</h1>
+            <h2>I'm a 15 Year Old Programmer & Graphic Designer living in Canada.<br>I speak English and French.</h2>
+        </div>
+
+        <div class="info-points">
+            <h1>What Can I Do?</h1>
+
+            <div class="info-point-groups">
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">iOS</span>
+                        <h2>iOS Development</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">desktop_windows</span>
+                        <h2>Windows Development</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">joystick</span>
+                        <h2>Unity Development</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">web</span>
+                        <h2>Web Development</h2>
+                    </div>
+                </div>
+            </div>
+            <h2 style="margin-top: 15px; margin-bottom: 0;">and General Development.</h2>
+        </div>
+
+        <div class="info-points">
+            <h1>What Languages?</h1>
+
+            <div class="info-point-groups">
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">coffee</span>
+                        <h2>Java</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">child_care</span>
+                        <h2>Scratch (lmao)</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">terminal</span>
+                        <h2>C#</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">html</span>
+                        <h2>HTML/CSS</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">dynamic_form</span>
+                        <h2>Python</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">javascript</span>
+                        <h2>JavaScript</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">raven</span>
+                        <h2>Swift/SwiftUI</h2>
+                    </div>
+                </div>
+
+                <div class="info-point-group">
+                    <div class="info-point">
+                        <span class="material-symbols-rounded info-point-icon">skull</span>
+                        <h2>C++</h2>
+                    </div>
+                </div>
+            </div>
+            <h2 style="margin-top: 15px; margin-bottom: 0;">Sorted Best to Worst</h2>
+        </div>
+
+        
+        <div class="info-points">
+            <h1>My Projects</h1>
+
+            <div class="info-point-groups-large">
+                <div class="info-point-group-large" onclick="openURL('https://github.com/Broco8Dev/Prism')" >
+                    <div class="info-point-large">
+                        <img class="material-symbols-rounded info-point-large-icon" src="prismicon.png"></img>
+                        <h1>Prism</h1>
+                        <h2>iOS 17+ Customization & Sideloading.</h2>
+                    </div>
+
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+
+                <div class="info-point-group-large" onclick="openURL('https://github.com/loyahdev/Flux-Archives')">
+                    <div class="info-point-large">
+                        <img class="material-symbols-rounded info-point-large-icon" src="fluxicon.png"></img>
+                        <h1>Flux</h1>
+                        <h2>(Deprecated) Precursor to Prism.</h2>
+                    </div>
+                    
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+
+                <div class="info-point-group-large" onclick="openURL('https://brocodev.itch.io/the-backrooms')">
+                    <div class="info-point-large">
+                        <img class="material-symbols-rounded info-point-large-icon" src="backroomicon.png"></img>
+                        <h1>WTTB</h1>
+                        <h2>Backrooms Horror Game Made In a Week.</h2>
+                    </div>
+                    
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+
+                <div class="info-point-group-large" onclick="openURL('https://brocodev.itch.io/wild-woods')">
+                    <div class="info-point-large">
+                        <img class="material-symbols-rounded info-point-large-icon" src="wildwoodicon.png"></img>
+                        <h1>Wild Woods</h1>
+                        <h2>Group Project for a Game Dev Class.</h2>
+                    </div>
+                    
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+
+                <div class="info-point-group-large" onclick="openURL('https://discord.gg/yx35bgRxF4')">
+                    <div class="info-point-large">
+                        <img class="material-symbols-rounded info-point-large-icon" src="bridgemessage.png"></img>
+                        <h1>Bridge Message</h1>
+                        <h2>iMessage For Windows.</h2>
+                    </div>
+                    
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+
+                <div class="info-point-group-large" onclick="openURL('https://github.com/Broco8Dev/Unity3D-Multiplayer-Template')">
+                    <div class="info-point-large">
+                        <span class="material-symbols-rounded info-point-icon">web</span>
+                        <h1>Unity Multiplayer</h1>
+                        <h2>Super Unsecure Unity Multiplayer System.</h2>
+                    </div>
+                    
+                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                </div>
+            </div>
+            <h2 style="margin-top: 15px; margin-bottom: 0;">Other Shitty Projects on Itch.io or GitHub</h2>
+        </div>
+
+        <h3 class="context-button" style="margin-top: 250px; font-size: 18px; z-index: 10001;" onclick="scrollToTop()">Back To Top</h3>
+    </div>
+
+    <script>
+        function scrollToElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                const yOffset = -60;
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function showTwitterOptions(event) {
+            event.stopPropagation();
+            const selector = document.getElementById('twitter-selector');
+            selector.classList.toggle('show');
+        }
+
+        function openTwitterAccount(url) {
+            openURL(url);
+            hideTwitterSelector();
+        }
+
+        function hideTwitterSelector() {
+            document.getElementById('twitter-selector').classList.remove('show');
+        }
+
+        document.addEventListener('click', function(event) {
+            const selector = document.getElementById('twitter-selector');
+            const twitterButton = document.querySelector('img[alt="twitter-logo"]');
+            if (!selector.contains(event.target) && event.target !== twitterButton) {
+                hideTwitterSelector();
+            }
+        });
+    </script>
+    <script src="pageSwitcher.js"></script>
+    <script>
+        const circle = document.querySelector('.circle');
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            circle.style.transform = `translate(${x - 10}px, ${y - 10}px)`;
+        });
+    </script>
+</body>
+</html>
