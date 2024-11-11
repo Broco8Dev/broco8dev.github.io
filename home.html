@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>BrocoDev Portfolio</title>
+    <meta name="description" content="BrocoDev's Personal Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap">
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
@@ -24,311 +25,327 @@
         }
 
         .gradient-blur {
-    z-index: 1;
-    position: fixed;
-    height: 300px;
-    width: 100%;
-    bottom: 0;
-    pointer-events: none;
-  }
-  
-  .gradient-blur > div,
-  .gradient-blur::before,
-  .gradient-blur::after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-  }
-  
-  .gradient-blur::before {
-    content: "";
-    z-index: 1;
-    backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.5px);
-    mask: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 0) 75%
-    );
-  }
-  
-  .gradient-blur > div:nth-of-type(1) {
-    z-index: 2;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-    mask: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 25%,
-      rgba(0, 0, 0, 1) 50%,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 0) 100%
-    );
-  }
-  
-  .gradient-blur > div:nth-of-type(2) {
-    z-index: 3;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    mask: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 1) 75%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  }
-  
-  .gradient-blur::after {
-    content: "";
-    z-index: 4;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    mask: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 75%,
-      rgba(0, 0, 0, 1) 100%
-    );
-  }
+            z-index: 1;
+            position: fixed;
+            height: 300px;
+            width: 100%;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .gradient-blur::before,
+        .gradient-blur::after,
+        .gradient-blur > div {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+        }
+
+        .gradient-blur::before {
+            content: "";
+            z-index: 1;
+            backdrop-filter: blur(0.5px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 75%);
+        }
+
+        .gradient-blur > div:nth-of-type(1) {
+            z-index: 2;
+            backdrop-filter: blur(1px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .gradient-blur > div:nth-of-type(2) {
+            z-index: 3;
+            backdrop-filter: blur(2px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 100%);
+        }
+
+        .gradient-blur::after {
+            content: "";
+            z-index: 4;
+            backdrop-filter: blur(4px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 100%);
+        }
+
     </style>
 </head>
 <body>
+
     <div class="gradient-blur">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
         <div></div>
         <div></div>
     </div>
     <div class="circle"></div>
     <div class="context">
-        <img class="context-img" src="pfp.png" alt="Prism Icon" id="top">
-        <h1>BrocoDev</h1>
-        <h2><span class="highlighted">Multi-Platform</span> Full Stack Developer</h2>
+        <img class="context-img" src="pfp.png" alt="Profile Picture" id="top">
+        <div class="header">
+            <h1>BrocoDev</h1>
+            <h3><span class="highlighted">Multi-Platform</span> Full Stack Developer</h3>
+        </div>
 
         <div class="context-buttons">
             <div class="context-buttons-hstack">
-                <h3 class="context-button" id="context-button" onclick="scrollToElement('info')">Learn More</h3>
-                <!-- <span onclick="openURL('https://github.com/Broco8Dev/Prism/releases/latest')" class="material-symbols-rounded context-download-button">downloading</span>    -->
+                <h3 class="context-button" id="context-button" onclick="scrollToElement('info')">Learn More<div class="gradient-border-bg-button"></div></h3>
             </div>
 
             <div class="context-buttons-hstack">
-                <img onclick="openURL('https://discord.gg/yx35bgRxF4')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/discord-logo.png" alt="discord-logo"/>
-                <img onclick="showTwitterOptions(event)" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/twitter.png" alt="twitter-logo"/>
-                <img onclick="openURL('https://www.youtube.com/@BrocoDev')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/youtube-play.png" alt="discord-logo"/>
-                <img onclick="openURL('https://github.com/Broco8Dev/Prism')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/github.png" alt="discord-logo"/>
+                <img onclick="openURL('https://discord.gg/yx35bgRxF4')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/discord-logo.png" alt="Discord Logo">
+                <img onclick="showTwitterOptions(event)" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/twitter.png" alt="Twitter Logo"/>
+                <img onclick="openURL('https://www.youtube.com/@BrocoDev')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/youtube-play.png" alt="YouTube Logo"/>
+                <img onclick="openURL('https://github.com/Broco8Dev/Prism')" class="context-button-slim" src="https://img.icons8.com/material-rounded/120/FFFFFF/github.png" alt="GitHub Logo"/>
             </div>
 
             <div id="twitter-selector" class="twitter-selector">
-                <button onclick="openTwitterAccount('https://x.com/Broco8Dev')">BrocoDev</button>
-                <button onclick="openTwitterAccount('https://x.com/NovaJBNews')">NovaJB</button>
+                <button onclick="openTwitterAccount('https://x.com/Broco8Dev')">Broco8Dev</button>
             </div>
-   
         </div>
 
         <div class="info" id="info">
             <h1>Who am I?</h1>
             <h2>I'm a 15 Year Old Programmer & Graphic Designer living in Canada.<br>I speak English and French.</h2>
+            <div class="gradient-border-bg"></div>
         </div>
 
         <div class="info-points">
             <h1>What Can I Do?</h1>
+            <div class="gradient-border-bg"></div>
+            <div class="info-point-groups" id="skills-container">
 
-            <div class="info-point-groups">
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">iOS</span>
-                        <h2>iOS Development</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">desktop_windows</span>
-                        <h2>Windows Development</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">joystick</span>
-                        <h2>Unity Development</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">web</span>
-                        <h2>Web Development</h2>
-                    </div>
-                </div>
             </div>
             <h2 style="margin-top: 15px; margin-bottom: 0;">and General Development.</h2>
         </div>
 
         <div class="info-points">
             <h1>What Languages?</h1>
+            <div class="gradient-border-bg"></div>
+            <div class="info-point-groups" id="languages-container">
 
-            <div class="info-point-groups">
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">coffee</span>
-                        <h2>Java</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">child_care</span>
-                        <h2>Scratch (lmao)</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">terminal</span>
-                        <h2>C#</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">html</span>
-                        <h2>HTML/CSS</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">dynamic_form</span>
-                        <h2>Python</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">javascript</span>
-                        <h2>JavaScript</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">raven</span>
-                        <h2>Swift/SwiftUI</h2>
-                    </div>
-                </div>
-
-                <div class="info-point-group">
-                    <div class="info-point">
-                        <span class="material-symbols-rounded info-point-icon">skull</span>
-                        <h2>C++</h2>
-                    </div>
-                </div>
             </div>
             <h2 style="margin-top: 15px; margin-bottom: 0;">Sorted Best to Worst</h2>
         </div>
 
-        
         <div class="info-points">
             <h1>My Projects</h1>
+            <div class="gradient-border-bg"></div>
+            <div class="info-point-groups-large" id="projects-container">
 
-            <div class="info-point-groups-large">
-                <div class="info-point-group-large" onclick="openURL('https://github.com/Broco8Dev/Prism')" >
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="prismicon.png"></img>
-                        <h1>Prism</h1>
-                        <h2>iOS 17+ Customization & Sideloading.</h2>
-                    </div>
-
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://github.com/Broco8Dev/VisionTab')" >
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="visiontab.png"></img>
-                        <h1>VisionTab</h1>
-                        <h2>VisionOS NewTab for Chromium.</h2>
-                    </div>
-
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://github.com/loyahdev/Flux-Archives')">
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="fluxicon.png"></img>
-                        <h1>Flux</h1>
-                        <h2>(Deprecated) Precursor to Prism.</h2>
-                    </div>
-                    
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://brocodev.itch.io/the-backrooms')">
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="backroomicon.png"></img>
-                        <h1>WTTB</h1>
-                        <h2>Backrooms Horror Game Made In a Week.</h2>
-                    </div>
-                    
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://brocodev.itch.io/wild-woods')">
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="wildwoodicon.png"></img>
-                        <h1>Wild Woods</h1>
-                        <h2>Group Project for a Game Dev Class.</h2>
-                    </div>
-                    
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://discord.gg/yx35bgRxF4')">
-                    <div class="info-point-large">
-                        <img class="material-symbols-rounded info-point-large-icon" src="bridgemessage.png"></img>
-                        <h1>Bridge Message</h1>
-                        <h2>iMessage For Windows.</h2>
-                    </div>
-                    
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
-
-                <div class="info-point-group-large" onclick="openURL('https://github.com/Broco8Dev/Unity3D-Multiplayer-Template')">
-                    <div class="info-point-large">
-                        <span class="material-symbols-rounded info-point-icon">web</span>
-                        <h1>Unity Multiplayer</h1>
-                        <h2>Super Unsecure Unity Multiplayer System.</h2>
-                    </div>
-                    
-                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
-                </div>
             </div>
-            <h2 style="margin-top: 15px; margin-bottom: 0;">Other Shitty Projects on Itch.io or GitHub</h2>
+            <h2 style="margin-top: 15px; margin-bottom: 0;">Other Projects on Itch.io or GitHub</h2>
         </div>
 
-        <h3 class="context-button" style="margin-top: 250px; font-size: 18px; z-index: 10001;" onclick="scrollToTop()">Back To Top</h3>
+        <h3 class="context-button" style="margin-top: 250px; font-size: 14px; z-index: 10001;" onclick="scrollToTop()">Back To Top</h3>
     </div>
 
     <script>
+        const skills = [
+            { icon: "iOS", text: "iOS Development" },
+            { icon: "desktop_windows", text: "Windows Development" },
+            { icon: "joystick", text: "Unity Development" },
+            { icon: "web", text: "Web Development" }
+        ];
+
+        const languages = [
+            { icon: "coffee", text: "Java" },
+            { icon: "child_care", text: "Scratch" },
+            { icon: "terminal", text: "C#" },
+            { icon: "html", text: "HTML/CSS" },
+            { icon: "dynamic_form", text: "Python" },
+            { icon: "javascript", text: "JavaScript" },
+            { icon: "raven", text: "Swift/SwiftUI" },
+            { icon: "skull", text: "C++" }
+        ];
+
+        const projects = [
+        {
+            icon: "prismicon.png",
+            title: "Prism",
+            subtitle: "iOS 17+ Customization & Sideloading.",
+            description: "<strong>Prism</strong> is a revolutionary tool for customizing and sideloading apps on iOS 17 and newer. It allows users to personalize their devices beyond the standard options provided by Apple.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/prism_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/prism_screenshot2.png"
+            ],
+            link: null,
+            linkText: null
+        },
+        {
+            icon: "zicon.png",
+            title: "Z Social",
+            subtitle: "Twitter-inspired Social Media",
+            description: "<strong>Z Social</strong> is a Twitter-inspired social media with a sleek UI. It combines the ease of use and polish of Instagram with the social nature of X.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/zsocial_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/zsocial_screenshot2.png"
+            ],
+            link: null,
+            linkText: null
+        },
+        {
+            icon: "mineclient.png",
+            title: "MineClient",
+            subtitle: "Optimized Minecraft client for SMPs",
+            description: "<strong>MineClient</strong> is a Minecraft client designed for a smooth and optimized experience on SMPs. It includes shaders, has limited mod support, and various optimizations. It's made in Unity and based on Mineflayer.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/mineclient_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/mineclient_screenshot2.png"
+            ],
+            link: null,
+            linkText: null
+        },
+        {
+            icon: "visiontab.png",
+            title: "VisionTab",
+            subtitle: "VisionOS NewTab for Chromium",
+            description: "<strong>VisionTab</strong> is a VisionOS styled New Tab for Chromium based web browsers. It's sleek, customizable, and recognizable.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/visiontab_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/visiontab_screenshot2.png"
+            ],
+            link: "https://github.com/Broco8Dev/VisionTab",
+            linkText: "View on GitHub"
+        },
+        {
+            icon: "https://developer.valvesoftware.com/w/images/thumb/8/8b/Debugempty.png/200px-Debugempty.png",
+            title: "Chapp",
+            subtitle: "Web-chat interface made in a day",
+            description: "<strong>Chapp</strong> is a web-chat interface made in a day. It's basically a 90s chatroom. The server is down, and it was one of my first websites, so it's quite basic.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/chapp_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/chapp_screenshot2.png"
+            ],
+            link: "https://broco8dev.github.io/Chapp/",
+            linkText: "View on GitHub"
+        },
+        {
+            icon: "fluxicon.png",
+            title: "Flux",
+            subtitle: "Deprecated iOS 17+ Tweaking",
+            description: "<strong>Flux</strong> is a deprecated iOS customization toolbox for iOS 17+. It didn't use exploits and was powered by iOS shortcuts.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/flux_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/flux_screenshot2.png"
+            ],
+            link: null,
+            linkText: null
+        },
+        {
+            icon: "backroomicon.png",
+            title: "WTTB",
+            subtitle: "Backrooms Horror Game Made in a Week",
+            description: "<strong>Welcome To The Backrooms</strong> is a Backrooms horror game made in a few days. It was my first published Unity game.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/wttb_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/wttb_screenshot2.png"
+            ],
+            link: "https://brocodev.itch.io/the-backrooms",
+            linkText: "View on Itch.io"
+        },
+        {
+            icon: "wildwoodicon.png",
+            title: "Wild Woods",
+            subtitle: "Group Project for a Game Dev Class",
+            description: "<strong>Wild Woods</strong> is a strategy-based game made for a game development class. It's extremely rough around the edges, as we were crunched for time.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/wildwoods_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/wildwoods_screenshot2.png"
+            ],
+            link: "https://brocodev.itch.io/wild-woods",
+            linkText: "View on Itch.io"
+        },
+        {
+            icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEo5oEg5vkLtiUACqpPVgugaMSD5CF3VYFlQ&s",
+            title: "Unity Multiplayer",
+            subtitle: "AWFUL Unity Multiplayer Framework",
+            description: "<strong>Unity Multiplayer</strong> is a deprecated and insecure Unity player syncing framework. It only supports player syncing and sends data using HTTP.",
+            images: [
+                "https://images.ctfassets.net/ihx0a8chifpc/unity_multiplayer_screenshot1.png",
+                "https://images.ctfassets.net/ihx0a8chifpc/unity_multiplayer_screenshot2.png"
+            ],
+            link: "https://github.com/Broco8Dev/Unity3D-Multiplayer-Template",
+            linkText: "View on GitHub"
+        }
+    ];
+
+        function generateSkills() {
+            const container = document.getElementById('skills-container');
+            skills.forEach(skill => {
+                container.innerHTML += `
+                    <div class="info-point-group">
+                        <div class="info-point">
+                            <span class="material-symbols-rounded info-point-icon">${skill.icon}</span>
+                            <h2 class="point-text">${skill.text}</h2>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function generateLanguages() {
+            const container = document.getElementById('languages-container');
+            languages.forEach(lang => {
+                container.innerHTML += `
+                    <div class="info-point-group">
+                        <div class="info-point">
+                            <span class="material-symbols-rounded info-point-icon">${lang.icon}</span>
+                            <h2 class="point-text">${lang.text}</h2>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function generateProjects() {
+            const container = document.getElementById('projects-container');
+            projects.forEach(project => {
+                const imagesHTML = project.images.map(imgSrc => `<img src="${imgSrc}" alt="${project.title} Screenshot">`).join('');
+                const linkHTML = project.link ? `<div onclick="openURL('${project.link}')" class="github-link-button">${project.linkText}<div class="gradient-border-bg"></div></div>` : '';
+                container.innerHTML += `
+                    <div class="info-point-group-large">
+                        <div class="vstack">
+                            <div class="info-point-large">
+                                <div class="hstack">
+                                    <img class="info-point-large-icon" src="${project.icon}" alt="${project.title} Icon">
+                                    <div class="vstack">
+                                        <h1>${project.title}</h1>
+                                        <h2 class="point-text">${project.subtitle}</h2>
+                                    </div>
+                                    <span class="material-symbols-rounded info-point-large-chevron">arrow_forward_ios</span>
+                                </div>
+                            </div>
+                            <div class="more-info">
+                                <p>${project.description}</p>
+                                <div class="image-scroller">
+                                    ${imagesHTML}
+                                </div>
+                                ${linkHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Add event listeners for toggle
+            document.querySelectorAll('.info-point-group-large').forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('expanded');
+                });
+            });
+        }
+
+        // Utility Functions
         function scrollToElement(id) {
             const element = document.getElementById(id);
             if (element) {
                 const yOffset = -60;
                 const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({top: y, behavior: 'smooth'});
+                window.scrollTo({ top: y, behavior: 'smooth' });
             }
         }
 
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function showTwitterOptions(event) {
@@ -348,20 +365,45 @@
 
         document.addEventListener('click', function(event) {
             const selector = document.getElementById('twitter-selector');
-            const twitterButton = document.querySelector('img[alt="twitter-logo"]');
+            const twitterButton = document.querySelector('img[alt="Twitter Logo"]');
             if (!selector.contains(event.target) && event.target !== twitterButton) {
                 hideTwitterSelector();
             }
         });
+
+        // Initialize Content on Page Load
+        window.onload = function() {
+            generateSkills();
+            generateLanguages();
+            generateProjects();
+        };
     </script>
     <script src="pageSwitcher.js"></script>
     <script>
         const circle = document.querySelector('.circle');
-        
+        const testElement = document.getElementById('projectModal');
+
         document.addEventListener('mousemove', (e) => {
             const x = e.clientX;
             const y = e.clientY;
+
+            // Move the circle
             circle.style.transform = `translate(${x - 10}px, ${y - 10}px)`;
+
+            // Check if the circle is touching the test element
+            const circleRect = circle.getBoundingClientRect();
+            const testRect = testElement.getBoundingClientRect();
+
+            // Check for overlap
+            const isTouching = !(
+                circleRect.right < testRect.left ||
+                circleRect.left > testRect.right ||
+                circleRect.bottom < testRect.top ||
+                circleRect.top > testRect.bottom
+            );
+
+            // Set z-index based on whether the elements are touching
+            circle.style.zIndex = isTouching ? '100000' : '10000';
         });
     </script>
 </body>
